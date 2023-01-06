@@ -1,0 +1,4 @@
+{
+    "SessionSecret":"Something very very secret ",
+    "JWTKEY":"very secret key indeed"
+}
