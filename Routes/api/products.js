@@ -19,6 +19,15 @@ router.post('/:id',async (req,res)=>{
     res.json({message:'View is successfully made'})
 })
 
+router.put('/Search',async(req,res)=>{
+     const {query}=req.body;
+   
+    const products=await productModel.find({name:{$regex:query,$options:'i'}});
+res.send(products);
+
+
+})
+
 
 
 module.exports=router;
