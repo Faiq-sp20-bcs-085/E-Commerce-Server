@@ -3,7 +3,10 @@ const express=require('express');
 const router=express.Router();
 const productModel=require('../../Models/productSchema');
 router.get('/',async(req,res)=>{
-    const products=await productModel.find();
+     const limit=parseInt(req.query.limit) || 6;
+    const page=parseInt(req.query.page) ||1;
+    const skip=(page -1)*limit;
+    const products=await productModel.find().skip(skip).limit(limit);
     res.send(products);
 })
 
