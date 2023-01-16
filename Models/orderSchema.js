@@ -8,12 +8,12 @@ const orderSchema=mongoose.Schema({
 
     items:[
         {
-            _id:{
-                type:mongoose.Types.ObjectId,
-                ref:'products'
+            id:{
+                type:String
+                
             },
-            qty:Number,
-            name:String
+            quantity:Number,
+            description:String
         }
     ],
 
