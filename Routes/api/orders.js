@@ -51,7 +51,7 @@ const session=await stripe.checkout.sessions.create({
     
     mode:'payment',
     metadata:{user:req.params.uId},
-    success_url:'http://localhost:3000/payment/successfull',
+    success_url:'http://localhost:3000/payment/successful',
     cancel_url:'http://localhost:3000/Placeorder',
     
     
