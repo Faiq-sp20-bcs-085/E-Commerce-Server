@@ -15,7 +15,7 @@ const reviewsRouter=require('./Routes/api/reviews');
 const productApiRouter=require('./Routes/api/products');
 const ratingRouter=require('./Routes/api/rating');
 const orderApiRouter=require('./Routes/api/orders')
-const SearchRouter=require('./Routes/Search')
+
 const paymentApiRouter=require('./Routes/api/payments')
 
 
@@ -56,7 +56,7 @@ app.use('/api/products',productApiRouter);
 app.use('/api/reviews',reviewsRouter);
 app.use('/api/ratings',ratingRouter)
 app.use('/api/orders',orderApiRouter);
-app.use('/Search',SearchRouter);
+
 app.use('/api/payments',paymentApiRouter);
 
 
